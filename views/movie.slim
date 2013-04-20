@@ -1,0 +1,5 @@
+- for movie in @stats
+  h3 = movie.title
+  h5 = "Nombre de Tweet analysés: " +  movie.total_count.to_s
+  h5 = "POSITIF: " + movie.stat_positive.to_s + "%"
+  h5 = "NEGATIF: " + movie.stat_negative.to_s + "%"

@@ -21,5 +21,5 @@ end
 
 get '/movie/:title' do
   @stats = Stat.where(title: "#{params[:title]}")
-  slim :fiche
+  slim :movie
 end

@@ -1,12 +1,6 @@
-h1 République Démocratique du Cinéma
-
-div#movies
-  h2 Les Résultats frais du matin
-  -for stat in @stats
-    h3 = stat.title
-    h6 Nombre de tweets
-    p = stat.total_count
-    h6 Positifs
-    p = stat.stat_positive
-    h6 Negatifs
-    p = stat.stat_negative
+ul 
+  - for movie in @stats
+    li id="link_fiche"
+      = movie.title \
+      + " | " 
+      a href="/movie/#{movie.title}" voir la fiche
