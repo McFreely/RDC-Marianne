@@ -18,3 +18,8 @@ get '/' do
   @stats = Stat.all
   slim :index
 end
+
+get '/movie/:title' do
+  @stats = Stat.where(title: "#{params[:title]}")
+  slim :fiche
+end
