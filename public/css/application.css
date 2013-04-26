@@ -1,8 +1,48 @@
-/* line 1, application.scss */
 body {
   width: 1200px;
   margin: 0 auto;
-  background-color: aliceblue; }
-  /* line 5, application.scss */
-  body img {
+  background-color: white; }
+
+#banner {
+  height: 159px;
+  padding-right: 20px;
+  background-color: #bedcf0; }
+  #banner a {
+    height: 0; }
+  #banner img {
     width: 500px; }
+  #banner h1 {
+    float: right;
+    color: #164666; }
+
+#movie_box {
+  width: 270px;
+  height: 350px;
+  float: left;
+  background: #6ab0de;
+  margin: 40px 0px 10px 23px;
+  text-align: center; }
+  #movie_box h2 {
+    background: #2472a4;
+    margin: 0 0 10px 0;
+    padding: 5px 0;
+    color: #0d293c; }
+  #movie_box img {
+    width: 130px; }
+  #movie_box #stat {
+    padding: 5px 10px;
+    width: 50px;
+    margin: 10px auto;
+    background: #d2e7f5; }
+
+#movie_page {
+  text-align: center;
+  background: #6ab0de;
+  padding-bottom: 10px; }
+  #movie_page h1 {
+    background: #2472a4;
+    margin: 0 0 10px 0;
+    padding: 5px 0;
+    color: #0b2433; }
+  #movie_page #trailer {
+    border: 6px solid #2980b9; }

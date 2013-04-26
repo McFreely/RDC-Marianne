@@ -1,5 +1,11 @@
-- for movie in @stats
-  h3 = movie.title
-  h5 = "Nombre de Tweet analysés: " +  movie.total_count.to_s
-  h5 = "POSITIF: " + movie.stat_positive.to_s + "%"
-  h5 = "NEGATIF: " + movie.stat_negative.to_s + "%"
+#movie_page
+  - for movie in @stats
+    h1 = movie.title
+
+    <iframe width="853" height="480" src="http://www.youtube.com/embed/vCXRt0kQvUE" frameborder="0" allowfullscreen id="trailer"></iframe>
+
+    h5 = "Durée: " + movie.runtime.to_s + " min"
+    h5 = "Sorti le : " +  movie.release_date
+    h5 = "Nombre de Tweet analysés: " +  movie.total_count.to_s
+    h5 = "POSITIF: " + movie.stat_positive.to_s + "%"
+    h5 = "NEGATIF: " + movie.stat_negative.to_s + "%"

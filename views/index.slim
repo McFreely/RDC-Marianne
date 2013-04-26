@@ -1,6 +1,7 @@
-div#recent_movies
+#recent_movies
   - for movie in @stats
-   div id="movie_box"
-     h4 = movie.title 
-     h4 = movie.stat_positive.to_s + "% ~ " + movie.stat_negative.to_s+ "%"
+   #movie_box
+     h2 = movie.title 
+     img src="#{movie.movie_poster}"
+     h4 id="stat" = movie.stat_positive.to_s + " %"
      a href="/movie/#{movie.title}" voir la fiche
