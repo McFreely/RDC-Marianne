@@ -3,5 +3,5 @@
    a href="/movie/#{movie.title}"
      #movie_box
        img src="#{movie.movie_poster}"
-       h2 = movie.title
-       h3 id="stat" = movie.stat_positive.to_s + " %"
+       h4 class="title_tag" = movie.title
+       h3 class="stat" = movie.stat_positive.to_s + " %"
