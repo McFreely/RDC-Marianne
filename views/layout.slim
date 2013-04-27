@@ -5,8 +5,12 @@ html
     title Republique Democratique du Cinema
     link href='/css/application.css' rel='stylesheet'
   body
-    #banner
-      a href='/'
-        img src='/img/marianne.jpg' alt='marianne' id="banner"/
-      h1 République Démocratique du Cinéma
+    #banner_container
+      #banner
+        a href='/'
+          img src='/img/banner.jpg' alt='marianne' id="banner"/
+    #menu_container
+      #menu
+        a href="/"
+          h3 Home
     == yield

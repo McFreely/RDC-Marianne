@@ -1,11 +1,17 @@
 #movie_page
   - for movie in @stats
-    h1 = movie.title
-
     <iframe width="853" height="480" src="http://www.youtube.com/embed/vCXRt0kQvUE" frameborder="0" allowfullscreen id="trailer"></iframe>
-
-    h5 = "Durée: " + movie.runtime.to_s + " min"
-    h5 = "Sorti le : " +  movie.release_date
-    h5 = "Nombre de Tweet analysés: " +  movie.total_count.to_s
-    h5 = "POSITIF: " + movie.stat_positive.to_s + "%"
-    h5 = "NEGATIF: " + movie.stat_negative.to_s + "%"
+    #movie_description
+      h1 = movie.title
+      #details
+        h4 = "Durée: " + movie.runtime.to_s + " min"
+        h4 = "Sortie le : " +  movie.release_date
+        h4 = "Réalisé par : David Fincher"
+        h4 = "Tweet analysés: " +  movie.total_count.to_s
+        h4 = "POSITIF: " + movie.stat_positive.to_s + "%"
+        h4 = "NEGATIF: " + movie.stat_negative.to_s + "%"
+        p This is the synopsys for Iron Man 3 
+          In Which Tony must face the most dangerous ennemy 
+          ever : Himself. Will he survive ? What will happen 
+          to Pepper. And Jarvis ?
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur magna enim, mollis a aliquam id, molestie eget ante. Nunc ac odio nibh, in semper odio. Curabitur vitae posuere orci. Morbi vel sem tortor. Suspendisse ut felis non justo blandit dignissim. Nunc elit orci, mattis eu ullamcorper quis, gravida ut mauris. Mauris in dolor sit amet lorem cursus euismod. Sed vel ipsum id purus malesuada consectetur. Nam tincidunt posuere lorem, a interdum sapien adipiscing non. Aliquam neque metus, varius nec pharetra ac, varius id nunc. Fusce cursus arcu id lacus fringilla vitae auctor massa congue. Cras ac nisl a felis viverra consequat. Suspendisse ac tortor in enim facilisis rutrum.
