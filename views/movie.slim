@@ -1,6 +1,6 @@
 #movie_page
   - for movie in @stats
-    <iframe width="853" height="480" src="http://www.youtube.com/embed/vCXRt0kQvUE" frameborder="0" allowfullscreen id="trailer"></iframe>
+    <iframe width="853" height="480" src="#{movie.trailer}" frameborder="0" allowfullscreen id="trailer"></iframe>
     #movie_description
       h1 = movie.title
       #details
