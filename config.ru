@@ -1,2 +1,2 @@
-require "./dashboard"
+require "./marianne"
 run Sinatra::Application
