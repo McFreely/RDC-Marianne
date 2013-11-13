@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="row">
+		<h2>Films:</h2>
+		{{#each movie in controller}}
+			<div class="four columns">
+				<img {{bindAttr src="movie.poster"}} style="width:200px;"/>
+				<h4>{{movie.title}}</h4><h5>{{movie.year}}</h5>
+			</div>
+		{{else}}
+			<h4>No Movies analysed yet...</h4>
+		{{/each}}
+	</div>
+</div>
+
+
