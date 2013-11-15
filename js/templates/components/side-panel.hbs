@@ -1,0 +1,9 @@
+<button {{action 'toggleSidePanel'}} class="btn-toggle">
+	{{#if isOpen }}
+		moins d'infos
+	{{else}}
+		plus d'infos
+	{{/if}}
+</button>
+
+{{yield}}

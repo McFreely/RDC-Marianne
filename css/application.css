@@ -1,106 +1,54 @@
-body {
-  margin: 0 auto;
-  background-color: #3b424b; }
+.container-banner {
+  background-color: #cd2628;
+}
 
-#banner_container {
-  background: #cd2628; }
+.container-top-bar {
+  background-color: black;
+}
 
-#banner {
-  width: 1200px;
-  height: 100px;
-  margin: 0 auto;
-  padding-right: 20px;
-  background-color: #cd2628; }
-  #banner a {
-    height: 0; }
-  #banner img {
-    width: auto; }
-  #banner h1 {
-    float: right;
-    color: white; }
-
-#menu_container {
-  background: #2b3039;
-  box-shadow: 1px 3px 10px 4px rgba(0, 0, 0, 0.1); }
-
-#menu {
-  width: 1000px;
-  height: 50px;
-  margin: 0 auto; }
-  #menu h3 {
-    margin: 0;
-    line-height: 50px; }
-  #menu a {
-    color: #a7aebc;
-    text-decoration: none; }
-    #menu a:hover {
-      color: #6d7990; }
-
-#recent_movies {
-  width: 1200px;
-  margin: 5px auto; }
-
-#movie_box {
-  width: 270px;
-  position: relative;
-  float: left;
-  margin: 40px 0px 10px 23px;
-  text-align: center; }
-  #movie_box .title_tag {
-    background: #cd2628;
-    width: 220px;
-    margin: -5px auto 10px auto;
-    padding: 5px 0;
-    position: absolute;
-    bottom: -5px;
-    left: 25px;
-    color: white; }
-  #movie_box img {
-    width: 220px;
-    height: 300px;
-    box-shadow: 1px 3px 10px 4px rgba(0, 0, 0, 0.1); }
-  #movie_box .stat {
-    background: #cd2628;
-    color: white;
-    margin: 0;
-    padding: 7px 12px;
-    position: absolute;
-    top: 10px;
-    box-shadow: 1px 3px 10px 4px rgba(0, 0, 0, 0.1); }
-
-#movie_page {
-  width: 960px;
-  margin: 20px auto; }
-  #movie_page #trailer {
-    width: 853px;
-    margin-left: 50px;
-    border: 6px solid #2b3037; }
-  #movie_page #movie_description {
+.card {
     text-align: center;
-    color: #a7aebc; }
-    #movie_page #movie_description h1 {
-      border: 6px solid #2b3037;
-      box-shadow: 1px 3px 10px 4px rgba(0, 0, 0, 0.1);
-      padding: 10px 25px;
-      margin: -11px auto 0;
-      width: 865px;
-      background: #c02425;
-      color: #d2d6dd; }
-    #movie_page #movie_description #details {
-      width: 863px;
-      margin: 0 auto; }
-      #movie_page #movie_description #details h4 {
-        border: 6px solid #2b3037;
-        background: #343a42;
-        padding: 10px 15px;
-        margin: -6px -6px 0px -6px;
-        width: 255px;
-        display: inline-block; }
-      #movie_page #movie_description #details p {
-        border: 6px solid #2b3037;
-        background: #343a42;
-        padding: 10px 15px;
-        margin: -6px -6px 0px -6px;
-        display: inline-block;
-        width: 825px;
-        text-align: left; }
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-right: -29px;
+}
+
+.poster {
+  border: solid 1px #cd2628;
+}
+
+.movie-info {
+  position: relative;
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  margin-left: 35px;
+  border: solid 1px #cd2628;
+  margin-top: 2px;
+  padding-top: 5px;
+  z-index: 10000;
+  background-color: #3b424b;
+  color: #C5CAD3;
+}
+
+.sidepanel {
+  height: 100px;
+  background-color: aliceblue;
+  /*padding-top:29px;
+  margin-top: 45px;
+  margin-bottom: 50px;*/
+}
+
+.btn-toggle {
+  width: 115px;
+  height: 25px;
+  padding: 0px 10px;
+  -webkit-transform: rotate(-90deg);
+  display: block;
+  background: #3b424b;
+  color: #C5CAD3;
+  position: absolute;
+  top: 60px;
+  right:-20px;
+  margin-bottom: 0;
+}

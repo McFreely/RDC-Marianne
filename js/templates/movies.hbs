@@ -1,15 +1,17 @@
 <div class="container">
-	<div class="row">
-		<h2>Films:</h2>
+    <div class="row movie-row">
 		{{#each movie in controller}}
-			<div class="four columns">
-				<img {{bindAttr src="movie.poster"}} style="width:200px;"/>
-				<h4>{{movie.title}}</h4><h5>{{movie.year}}</h5>
+			{{#link-to 'movies.movie' movie}}
+			<div class="large-3 columns card">
+				<img {{bindAttr src="movie.poster"}} class="poster" style="width:150px; height:200px;"/>
+				<h5 class='movie-info'>{{ result movie.stat_pos}}</h5>
 			</div>
+			{{/link-to}}
+	</div>
 		{{else}}
 			<h4>No Movies analysed yet...</h4>
 		{{/each}}
-	</div>
 </div>
+
 
 

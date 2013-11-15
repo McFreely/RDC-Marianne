@@ -1,0 +1,14 @@
+<div class="row">
+	<div class="large-3">
+		<img {{bind-attr src="movie.poster" alt="movie.title"}}>
+	</div>
+	<div class="large-9 columns movie-panel">
+		<p>Runtime: {{ movie.runtime }} | En Salle le: {{movie.release}} 
+										| Directed by: {{ movie.director }}</p>
+		<p>{{movie.plot}}</p>
+		<hr />
+		<p>Nombre de tweets analysés: {{ movie.total_count }}</p>
+		<p>Nombre Positif: {{ movie.stat_pos}}</p>
+		<p>Nombre Négatif: {{ movie.stat_neg}}</p>
+	</div>
+</div>
