@@ -26,6 +26,18 @@ body {
     }
 }
 
+.movie-info {
+        h4, h5, h6 {line-height: 0.7;}
+        .movie-title {
+            font-weight: bold; 
+            small {color: $red;}
+        }
+        margin: 0px 0 25px 0;
+}
+
+.fi-arrow-up {color: green;}
+.fi-arrow-right {color: orange;}
+.fi-arrow-down {color: red;}
 
 
 

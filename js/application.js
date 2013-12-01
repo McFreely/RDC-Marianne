@@ -53,10 +53,15 @@ module.exports = MoviesController;
 
 },{}],6:[function(require,module,exports){
 Ember.Handlebars.helper('result', function(value) {
-	if (value > 50) {
-		return "+++ "  + value + ' %';
+	var new_value = value/10;
+	if (value > 65) {
+		return new Handlebars.SafeString('<span><i class="fi-arrow-up"></i> ' + new_value + ' / 10 </span>');
+		return icon ;
+		
+	} else if ( value < 65 && value > 35) {
+		return new Handlebars.SafeString('<span><i class="fi-arrow-right"></i> ' + new_value + ' / 10 </span>');
 	} else {
-		return "--- " + value + ' %';
+		return new Handlebars.SafeString('<span><i class="fi-arrow-down"></i> ' + new_value + ' / 10 </span>');
 	}
 });
 
@@ -393,7 +398,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = '', stack1, stack2, hashTypes, hashContexts, options;
-  data.buffer.push("\n				<li>\n					");
+  data.buffer.push("\n				<li class='movie-info'>\n					");
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0,depth0],types:["STRING","ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
@@ -411,12 +416,16 @@ function program2(depth0,data) {
   data.buffer.push(escapeExpression(helpers.bindAttr.call(depth0, {hash:{
     'src': ("movie.poster")
   },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push(" class=\"poster\" style=\"width:150px; height:200px;\"/>\n						<h5 class='movie-info'>");
+  data.buffer.push(" class=\"poster\" style=\"width:150px; height:200px;\"/>\n						<h5 class=\"movie-title\">\n							<small>");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "movie.title", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push("</small>\n						</h5>\n						<h4><small>");
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
   data.buffer.push(escapeExpression(((stack1 = helpers.result || depth0.result),stack1 ? stack1.call(depth0, "movie.stat_pos", options) : helperMissing.call(depth0, "result", "movie.stat_pos", options))));
-  data.buffer.push("</h5>\n					");
+  data.buffer.push("</small></h4>\n					");
   return buffer;
   }
 

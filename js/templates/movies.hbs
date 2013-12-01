@@ -2,10 +2,13 @@
     <div class="row movie-row">
     	<ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-6">
 		{{#each movie in controller}}
-				<li>
+				<li class='movie-info'>
 					{{#link-to 'movies.movie' movie}}
 						<img {{bindAttr src="movie.poster"}} class="poster" style="width:150px; height:200px;"/>
-						<h5 class='movie-info'>{{ result movie.stat_pos}}</h5>
+						<h5 class="movie-title">
+							<small>{{ movie.title }}</small>
+						</h5>
+						<h4><small>{{ result movie.stat_pos }}</small></h4>
 					{{/link-to}}
 				</li>
 		{{/each}}

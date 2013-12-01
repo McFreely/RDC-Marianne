@@ -8,3 +8,21 @@ body {
   padding: 10px; }
   .movie-row .poster {
     box-shadow: 0px 1px 8px rgba(50, 50, 50, 0.59); }
+
+.movie-info {
+  margin: 0px 0 25px 0; }
+  .movie-info h4, .movie-info h5, .movie-info h6 {
+    line-height: 0.7; }
+  .movie-info .movie-title {
+    font-weight: bold; }
+    .movie-info .movie-title small {
+      color: #cd2628; }
+
+.fi-arrow-up {
+  color: green; }
+
+.fi-arrow-right {
+  color: orange; }
+
+.fi-arrow-down {
+  color: red; }
