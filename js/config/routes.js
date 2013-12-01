@@ -5,4 +5,3 @@ App.Router.map(function() {
 		this.route('movie', {path: '/:movie_id'});
 	})
 });
-

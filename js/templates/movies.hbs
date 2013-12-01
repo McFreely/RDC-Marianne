@@ -1,16 +1,17 @@
 <div class="container">
     <div class="row movie-row">
+    	<ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-6">
 		{{#each movie in controller}}
-			{{#link-to 'movies.movie' movie}}
-			<div class="large-3 columns card">
-				<img {{bindAttr src="movie.poster"}} class="poster" style="width:150px; height:200px;"/>
-				<h5 class='movie-info'>{{ result movie.stat_pos}}</h5>
-			</div>
-			{{/link-to}}
-	</div>
-		{{else}}
-			<h4>No Movies analysed yet...</h4>
+				<li>
+					{{#link-to 'movies.movie' movie}}
+						<img {{bindAttr src="movie.poster"}} class="poster" style="width:150px; height:200px;"/>
+						<h5 class='movie-info'>{{ result movie.stat_pos}}</h5>
+					{{/link-to}}
+				</li>
 		{{/each}}
+		</ul>
+	</div>
+		
 </div>
 
 
