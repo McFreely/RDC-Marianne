@@ -1469,8 +1469,7 @@ meta.foundation-mq-topbar {
   line-height: 45px;
   position: relative;
   background-color: white;
-  margin-bottom: 0;
-  margin-top: 15px; }
+  margin-bottom: 0; }
   .top-bar ul {
     margin-bottom: 0;
     list-style: none; }
@@ -1544,7 +1543,7 @@ meta.foundation-mq-topbar {
     height: auto;
     background: transparent; }
     .top-bar.expanded .title-area {
-      background: #333333; }
+      background: #ffffff; }
     .top-bar.expanded .toggle-topbar a {
       color: #888888; }
       .top-bar.expanded .toggle-topbar a span {
@@ -1579,7 +1578,7 @@ meta.foundation-mq-topbar {
     padding-left: 15px;
     font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-size: 0.8125rem;
-    font-weight: normal;
+    font-weight: bold;
     background: #ffffff; }
     .top-bar-section ul li > a.button {
       background: #008cba;
@@ -1601,7 +1600,7 @@ meta.foundation-mq-topbar {
       .top-bar-section ul li > a.button.alert:hover {
         background: #d32a0e; }
   .top-bar-section ul li:hover > a {
-    background: #272727;
+    background: #cd2628;
     color: white; }
   .top-bar-section ul li.active > a {
     background: #008cba;
@@ -1682,7 +1681,7 @@ meta.foundation-mq-topbar {
       position: relative;
       top: 7px; }
     .top-bar.expanded {
-      background: #333333; }
+      background: #ffffff; }
 
   .contain-to-grid .top-bar {
     max-width: 62.5rem;
@@ -1745,10 +1744,10 @@ meta.foundation-mq-topbar {
         line-height: 1;
         white-space: nowrap;
         padding: 12px 15px;
-        background: #333333; }
+        background: #ffffff; }
       .top-bar-section .dropdown li label {
         white-space: nowrap;
-        background: #333333; }
+        background: #ffffff; }
       .top-bar-section .dropdown li .dropdown {
         left: 100%;
         top: 0; }
@@ -1770,7 +1769,7 @@ meta.foundation-mq-topbar {
         right: 100%; }
 
   .no-js .top-bar-section ul li:hover > a {
-    background: #272727;
+    background: #cd2628;
     color: white; }
   .no-js .top-bar-section ul li:active > a {
     background: #008cba;
