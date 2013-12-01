@@ -494,7 +494,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   
-  data.buffer.push("En Salle");
+  data.buffer.push("<i class=\"fi-ticket\"></i>     En Salle");
   }
 
   data.buffer.push("<nav class=\"top-bar\" data-topbar=\"\">\n  <!-- Title -->\n  <ul class=\"title-area\">\n    <li class=\"name\"><h1></h1></li>\n\n    <!-- Mobile Menu Toggle -->\n    <li class=\"toggle-topbar menu-icon\"><a href=\"#\"><span>Menu</span></a></li>\n  </ul>\n\n  <!-- Top Bar Section -->\n  \n<section class=\"top-bar-section\">\n\n    <!-- Top Bar Left Nav Elements -->\n    <ul class=\"left\">\n      <li>");
@@ -503,7 +503,7 @@ function program1(depth0,data) {
   options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
   stack2 = ((stack1 = helpers['link-to'] || depth0['link-to']),stack1 ? stack1.call(depth0, "movies", options) : helperMissing.call(depth0, "link-to", "movies", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
-  data.buffer.push("</li>\n      <li><a href=\"#\">Top 10</a></li>\n	    <li><a href=\"#\">Prochainement</a></li>\n    </ul>\n\n    <!-- Top Bar Right Nav Elements -->\n    <ul class=\"right\">\n    <li class=\"has-form\">\n  <div class=\"row collapse\">\n    <div class=\"large-8 small-9 columns\">\n      <input type=\"text\" placeholder=\"Find Stuff\">\n    </div>\n    <div class=\"large-4 small-3 columns\">\n      <a href=\"#\" class=\"alert button expand\">Search</a>\n    </div>\n  </div>\n</li>\n    </ul>\n  </section></nav>");
+  data.buffer.push("</li>\n      <li><a href=\"#\"><i class=\"fi-crown\"></i>     Top 10</a></li>\n	    <li><a href=\"#\"><i class=\"fi-clock\"></i>   Prochainement</a></li>\n    </ul>\n \n    <!-- Top Bar Right Nav Elements -->\n    <ul class=\"right\">\n    <li class=\"has-form\">\n  <div class=\"row collapse\">\n    <div class=\"large-8 small-9 columns\">\n      <input type=\"text\" placeholder=\"Find Stuff\">\n    </div>\n    <div class=\"large-4 small-3 columns\">\n      <a href=\"#\" class=\"alert button expand\">Search</a>\n    </div>\n  </div>\n</li>\n    </ul>\n  </section></nav> ");
   return buffer;
   
 });
