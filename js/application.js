@@ -28,9 +28,8 @@ module.exports = App;
 var App = require('./app');
 
 App.Router.map(function() {
-	this.resource('movies', function() {
-		this.route('movie', {path: '/:movie_id'});
-	})
+	this.resource('movies');
+	this.route('movie', {path: '/movie/:movie_id'});
 });
 
 },{"./app":2}],4:[function(require,module,exports){
@@ -79,22 +78,23 @@ App.TopbarComponent = require('./components/topbar_component');
 App.MoviesController = require('./controllers/movies_controller');
 App.Movie = require('./models/movie');
 App.IndexRoute = require('./routes/index_route');
-App.MoviesMovieRoute = require('./routes/movies_movie_route');
+App.MovieRoute = require('./routes/movie_route');
 App.MoviesRoute = require('./routes/movies_route');
 App.ApplicationView = require('./views/application_view');
+App.FadeInView = require('./views/fade_in_view');
 
 require('./config/routes');
 
 module.exports = App;
 
 
-},{"./components/topbar_component":1,"./config/app":2,"./config/routes":3,"./controllers/movies_controller":5,"./helpers/result":6,"./models/movie":8,"./routes/index_route":9,"./routes/movies_movie_route":10,"./routes/movies_route":11,"./templates":12,"./views/application_view":15}],8:[function(require,module,exports){
+},{"./components/topbar_component":1,"./config/app":2,"./config/routes":3,"./controllers/movies_controller":5,"./helpers/result":6,"./models/movie":8,"./routes/index_route":9,"./routes/movie_route":10,"./routes/movies_route":11,"./templates":12,"./views/application_view":15,"./views/fade_in_view":16}],8:[function(require,module,exports){
 var Movie = DS.Model.extend({
 	title:   DS.attr('string'),
 	total_count: DS.attr('number'),
 	stat_pos: DS.attr('number'),
 	stat_neg: DS.attr('number'),
-	release:    DS.attr('date'),
+	release_date:    DS.attr('number'),
 	poster:  DS.attr('string'),
 	trailer: DS.attr('string'),
 	runtime: DS.attr('number'),
@@ -106,7 +106,7 @@ var Movie = DS.Model.extend({
 Movie.FIXTURES = [{
 	id: 1,
 	title:   "Intouchables",
-	release:    '2012',
+	release_date: 2012,
 	poster:  'http://www.cinetransat.ch/2013/wp-content/uploads/intouchables2.jpg',
 	total_count: 12330,
 	stat_pos: 95,
@@ -114,11 +114,11 @@ Movie.FIXTURES = [{
 	trailer: 'www.youtube.com/embed/dvdJ--DV0Uo"',
 	runtime: 120,
 	director: "Peter Pan",
-	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
+	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL. Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL. Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
 },{
 	id: 2,
 	title:   "Thor 2",
-	release:    '2013',
+	release_date: 2013,
 	poster:  'http://static4.businessinsider.com/image/51fefc05ecad04034500001e-960/thor%20the%20dark%20world%20poster.jpg',
 	total_count: 12330,
 	stat_pos: 70,
@@ -130,7 +130,7 @@ Movie.FIXTURES = [{
 },{
 	id: 3,
 	title:   "Oblivion",
-	release:    '2012',
+	release_date: 2012,
 	poster:  'http://www.impawards.com/2013/posters/oblivion_ver2_xlg.jpg',
 	total_count: 12330,
 	stat_pos: 45,
@@ -142,7 +142,7 @@ Movie.FIXTURES = [{
 },{
 	id: 4,
 	title:   "La Vénus à la fourrure",
-	release:    '2013',
+	release_date: 2013,
 	poster:  'http://www.leblogducinema.com/wp-content/uploads//2013/09/Affiche-du-film-LA-VENUS-A-LA-FOURRURE.jpg',
 	total_count: 12330,
 	stat_pos: 78,
@@ -155,7 +155,7 @@ Movie.FIXTURES = [{
 {
 	id: 5,
 	title:   "Inside Llewyn Davis",
-	release:    '2013',
+	release_date: 2013,
 	poster:  'http://upload.wikimedia.org/wikipedia/en/thumb/d/df/Inside_Llewyn_Davis_Poster.jpg/220px-Inside_Llewyn_Davis_Poster.jpg',
 	total_count: 12330,
 	stat_pos: 65,
@@ -168,7 +168,7 @@ Movie.FIXTURES = [{
 {
 	id: 6,
 	title:   "This is the end",
-	release:    '2013',
+	release_date: 2013,
 	poster:  'http://www.digitaltrends.com/wp-content/uploads/2013/06/this-is-the-end.jpg',
 	total_count: 12330,
 	stat_pos: 30,
@@ -179,7 +179,7 @@ Movie.FIXTURES = [{
 	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
 },{	id: 7,
 	title:   "Intouchables",
-	release:    '2012',
+	release_date: 2012,
 	poster:  'http://www.cinetransat.ch/2013/wp-content/uploads/intouchables2.jpg',
 	total_count: 12330,
 	stat_pos: 95,
@@ -191,7 +191,7 @@ Movie.FIXTURES = [{
 },{
 	id: 8,
 	title:   "Thor 2",
-	release:    '2013',
+	release_date: 2013,
 	poster:  'http://static4.businessinsider.com/image/51fefc05ecad04034500001e-960/thor%20the%20dark%20world%20poster.jpg',
 	total_count: 12330,
 	stat_pos: 70,
@@ -203,7 +203,7 @@ Movie.FIXTURES = [{
 },{
 	id: 9,
 	title:   "Oblivion",
-	release:    '2012',
+	release_date: 2012,
 	poster:  'http://www.impawards.com/2013/posters/oblivion_ver2_xlg.jpg',
 	total_count: 12330,
 	stat_pos: 45,
@@ -215,7 +215,7 @@ Movie.FIXTURES = [{
 },{
 	id: 10,
 	title:   "La Vénus à la fourrure",
-	release:    '2013',
+	release_date: 2013,
 	poster:  'http://www.leblogducinema.com/wp-content/uploads//2013/09/Affiche-du-film-LA-VENUS-A-LA-FOURRURE.jpg',
 	total_count: 12330,
 	stat_pos: 78,
@@ -228,7 +228,7 @@ Movie.FIXTURES = [{
 {
 	id: 11,
 	title:   "Inside Llewyn Davis",
-	release:    '2013',
+	release_date: 2013,
 	poster:  'http://upload.wikimedia.org/wikipedia/en/thumb/d/df/Inside_Llewyn_Davis_Poster.jpg/220px-Inside_Llewyn_Davis_Poster.jpg',
 	total_count: 12330,
 	stat_pos: 65,
@@ -241,7 +241,7 @@ Movie.FIXTURES = [{
 {
 	id: 12,
 	title:   "This is the end",
-	release:    '2013',
+	release_date: 2013,
 	poster:  'http://www.digitaltrends.com/wp-content/uploads/2013/06/this-is-the-end.jpg',
 	total_count: 12330,
 	stat_pos: 30,
@@ -252,7 +252,7 @@ Movie.FIXTURES = [{
 	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
 },{	id: 13,
 	title:   "Intouchables",
-	release:    '2012',
+	release_date: 2012,
 	poster:  'http://www.cinetransat.ch/2013/wp-content/uploads/intouchables2.jpg',
 	total_count: 12330,
 	stat_pos: 95,
@@ -264,7 +264,7 @@ Movie.FIXTURES = [{
 },{
 	id: 14,
 	title:   "Thor 2",
-	release:    '2013',
+	release_date: 2013,
 	poster:  'http://static4.businessinsider.com/image/51fefc05ecad04034500001e-960/thor%20the%20dark%20world%20poster.jpg',
 	total_count: 12330,
 	stat_pos: 70,
@@ -276,7 +276,7 @@ Movie.FIXTURES = [{
 },{
 	id: 15,
 	title:   "Oblivion",
-	release:    '2012',
+	release_date: 2012,
 	poster:  'http://www.impawards.com/2013/posters/oblivion_ver2_xlg.jpg',
 	total_count: 12330,
 	stat_pos: 45,
@@ -288,7 +288,7 @@ Movie.FIXTURES = [{
 },{
 	id: 16,
 	title:   "La Vénus à la fourrure",
-	release:    '2013',
+	release_date: 2013,
 	poster:  'http://www.leblogducinema.com/wp-content/uploads//2013/09/Affiche-du-film-LA-VENUS-A-LA-FOURRURE.jpg',
 	total_count: 12330,
 	stat_pos: 78,
@@ -301,7 +301,7 @@ Movie.FIXTURES = [{
 {
 	id: 17,
 	title:   "Inside Llewyn Davis",
-	release:    '2013',
+	release_date: 2013,
 	poster:  'http://upload.wikimedia.org/wikipedia/en/thumb/d/df/Inside_Llewyn_Davis_Poster.jpg/220px-Inside_Llewyn_Davis_Poster.jpg',
 	total_count: 12330,
 	stat_pos: 65,
@@ -314,7 +314,7 @@ Movie.FIXTURES = [{
 {
 	id: 18,
 	title:   "This is the end",
-	release:    '2013',
+	release_date: 2013,
 	poster:  'http://www.digitaltrends.com/wp-content/uploads/2013/06/this-is-the-end.jpg',
 	total_count: 12330,
 	stat_pos: 30,
@@ -340,19 +340,19 @@ module.exports = IndexRoute;
 
 
 },{}],10:[function(require,module,exports){
-var MoviesMovieRoute = Ember.Route.extend({
+var MovieRoute = Ember.Route.extend({
 	model: function(params) {
 		return App.Movie.find(params.movie_id);
 	}
 });
 
-module.exports = MoviesMovieRoute;
+module.exports = MovieRoute;
 
 
 },{}],11:[function(require,module,exports){
 var MoviesRoute = Ember.Route.extend({
 		model: function() {
-		return App.Movie.find();
+			return App.Movie.find();
 	}
 });
 
@@ -367,11 +367,11 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', hashTypes, hashContexts, escapeExpression=this.escapeExpression;
 
 
-  data.buffer.push("<div class=\"container-banner\">\n<div class=\"row\">\n	<div class=\"large-12\" >\n		<img src=\"img/banner.jpg\" alt=\"\">\n	</div>\n</div>\n</div>\n\n\n<div class=\"row\">\n	<div class=\"large-12\">\n		");
+  data.buffer.push("<div class=\"container-banner\">\n<div class=\"row\">\n	<div class=\"large-12\" >\n		<img src=\"img/banner.jpg\" alt=\"\">\n	</div>\n</div>\n</div>\n\n<div class=\"row\">\n	<div class=\"large-12\">\n		");
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "top-bar", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("\n	</div>\n</div>\n\n\n");
+  data.buffer.push("\n	</div>\n</div>\n\n");
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "outlet", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
@@ -390,6 +390,53 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
 });
 
+Ember.TEMPLATES['movie'] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  var buffer = '', stack1, hashContexts, hashTypes, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+
+
+  data.buffer.push("<div class=\"row\">\n	<div class=\"large-3\">\n		<img ");
+  hashContexts = {'src': depth0,'alt': depth0};
+  hashTypes = {'src': "STRING",'alt': "STRING"};
+  options = {hash:{
+    'src': ("poster"),
+    'alt': ("title")
+  },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
+  data.buffer.push(escapeExpression(((stack1 = helpers['bind-attr'] || depth0['bind-attr']),stack1 ? stack1.call(depth0, options) : helperMissing.call(depth0, "bind-attr", options))));
+  data.buffer.push(">\n	</div>\n	<div class=\"large-9 columns movie-panel\">\n		<p>Durée : ");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "runtime", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push(" | En Salle : ");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "release_date", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push(" \n										| Réalisé par : ");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "director", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push("</p>\n		<p>");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "plot", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push("</p>\n		<hr />\n		<p>Nombre de tweets analysés: ");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "total_count", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push("</p>\n		<p>Nombre Positif: ");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "stat_pos", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push("</p>\n		<p>Nombre Négatif: ");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "stat_neg", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push("</p>\n	</div>\n</div>");
+  return buffer;
+  
+});
+
 Ember.TEMPLATES['movies'] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
@@ -402,7 +449,7 @@ function program1(depth0,data) {
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0,depth0],types:["STRING","ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers['link-to'] || depth0['link-to']),stack1 ? stack1.call(depth0, "movies.movie", "movie", options) : helperMissing.call(depth0, "link-to", "movies.movie", "movie", options));
+  stack2 = ((stack1 = helpers['link-to'] || depth0['link-to']),stack1 ? stack1.call(depth0, "movie", "movie", options) : helperMissing.call(depth0, "link-to", "movie", "movie", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("\n				</li>\n		");
   return buffer;
@@ -439,53 +486,6 @@ function program2(depth0,data) {
   
 });
 
-Ember.TEMPLATES['movies/movie'] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-this.compilerInfo = [4,'>= 1.0.0'];
-helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', stack1, hashContexts, hashTypes, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
-
-
-  data.buffer.push("<div class=\"row\">\n	<div class=\"large-3\">\n		<img ");
-  hashContexts = {'src': depth0,'alt': depth0};
-  hashTypes = {'src': "STRING",'alt': "STRING"};
-  options = {hash:{
-    'src': ("movie.poster"),
-    'alt': ("movie.title")
-  },contexts:[],types:[],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  data.buffer.push(escapeExpression(((stack1 = helpers['bind-attr'] || depth0['bind-attr']),stack1 ? stack1.call(depth0, options) : helperMissing.call(depth0, "bind-attr", options))));
-  data.buffer.push(">\n	</div>\n	<div class=\"large-9 columns movie-panel\">\n		<p>Runtime: ");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "movie.runtime", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push(" | En Salle le: ");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "movie.release", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push(" \n										| Directed by: ");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "movie.director", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("</p>\n		<p>");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "movie.plot", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("</p>\n		<hr />\n		<p>Nombre de tweets analysés: ");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "movie.total_count", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("</p>\n		<p>Nombre Positif: ");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "movie.stat_pos", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("</p>\n		<p>Nombre Négatif: ");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "movie.stat_neg", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("</p>\n	</div>\n</div>");
-  return buffer;
-  
-});
-
 Ember.TEMPLATES['components/top-bar'] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
@@ -503,7 +503,7 @@ function program1(depth0,data) {
   options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
   stack2 = ((stack1 = helpers['link-to'] || depth0['link-to']),stack1 ? stack1.call(depth0, "movies", options) : helperMissing.call(depth0, "link-to", "movies", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
-  data.buffer.push("</li>\n      <li><a href=\"#\"><i class=\"fi-crown\"></i>     Top 10</a></li>\n	    <li><a href=\"#\"><i class=\"fi-clock\"></i>   Prochainement</a></li>\n    </ul>\n \n    <!-- Top Bar Right Nav Elements -->\n    <ul class=\"right\">\n    <li class=\"has-form\">\n  <div class=\"row collapse\">\n    <div class=\"large-8 small-9 columns\">\n      <input type=\"text\" placeholder=\"Find Stuff\">\n    </div>\n    <div class=\"large-4 small-3 columns\">\n      <a href=\"#\" class=\"alert button expand\">Search</a>\n    </div>\n  </div>\n</li>\n    </ul>\n  </section></nav> ");
+  data.buffer.push("</li>\n      <li><a href=\"#\"><i class=\"fi-crown\"></i>     Top 10</a></li>\n	    <li><a href=\"#\"><i class=\"fi-clock\"></i>   Prochainement</a></li>\n    </ul>\n \n    <!-- Top Bar Right Nav Elements -->\n    <ul class=\"right\">\n    <li class=\"has-form\">\n  <div class=\"row collapse\">\n    <div class=\"large-8 small-9 columns\">\n      <input type=\"text\" placeholder=\"Find Stuff\">\n    </div>\n    <div class=\"large-4 small-3 columns\">\n      <a href=\"#\" class=\"alert button expand\"><i class=\"fi-magnifying-glass\"></i> Search</a>\n    </div>\n  </div>\n</li>\n    </ul>\n  </section></nav>  ");
   return buffer;
   
 });
@@ -10939,5 +10939,13 @@ var ApplicationView = Ember.View.extend({
 });
 
 module.exports = ApplicationView;
+},{}],16:[function(require,module,exports){
+var FadeInView = Ember.View.extend({
+	click: function() {
+		this.$().hide();
+	}
+});
+
+module.exports = FadeInView;
 },{}]},{},[7])
 ;

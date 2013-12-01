@@ -1,6 +1,6 @@
 var MoviesRoute = Ember.Route.extend({
 		model: function() {
-		return App.Movie.find();
+			return App.Movie.find();
 	}
 });
 

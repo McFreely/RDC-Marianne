@@ -1,6 +1,7 @@
 $background: #3b424b;
 $anthracite: #2b3039;
 $red: #cd2628;
+$tooltip-text: white;
 
 @mixin shadow {
     box-shadow:  0px 1px 8px rgba(50, 50, 50, 0.59);
@@ -39,5 +40,36 @@ body {
 .fi-arrow-right {color: orange;}
 .fi-arrow-down {color: red;}
 
+.hover {position:relative;}
 
+.custom-tooltip {
+    display: none;
+    background-color: darken($red,15%);
+    color: $tooltip-text;
+    border-radius: 5px;
+    opacity:1;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    width: 648px;
+    padding: 10px 20px;
+    z-index: 10000;
+    float: left;
+
+    h3,h5 {
+        display: inline; 
+        color: $tooltip-text;
+    }
+    h4 {
+        display: inline; 
+        float: right; 
+        margin-top:12px; 
+        color: $tooltip-text;
+    }
+    p {text-align: justify;}
+}
+
+.hover:hover .custom-tooltip {
+    opacity:1;
+    visibility: visible;
+}
 

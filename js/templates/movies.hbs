@@ -3,7 +3,7 @@
     	<ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-6">
 		{{#each movie in controller}}
 				<li class='movie-info'>
-					{{#link-to 'movies.movie' movie}}
+					{{#link-to 'movie' movie}}
 						<img {{bindAttr src="movie.poster"}} class="poster" style="width:150px; height:200px;"/>
 						<h5 class="movie-title">
 							<small>{{ movie.title }}</small>
