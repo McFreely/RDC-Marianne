@@ -20,7 +20,7 @@ Movie.FIXTURES = [{
 	total_count: 12330,
 	stat_pos: 95,
 	stat_neg: 22,
-	trailer: 'www.youtube.com/embed/dvdJ--DV0Uo"',
+	trailer: 'https://www.youtube.com/embed/WzV6mXIOVl4',
 	runtime: 120,
 	director: "Peter Pan",
 	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL. Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL. Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"

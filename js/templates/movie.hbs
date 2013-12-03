@@ -1,14 +1,46 @@
-<div class="row">
-	<div class="large-3">
-		<img {{bind-attr src="poster" alt="title"}}>
+<div class="test">
+	<div class="row">
+		<div class="small-3 medium-3 poster">
+			<img {{bind-attr src="poster" alt="title"}} class="hide-for-small-only">
+		</div>
+		<div class="small-12 medium-9 large-9 columns details">
+			<h3><b>{{ title }}</b></h3>
+			<h5><small><b>Durée : </b></small> {{ runtime }} min</h5>
+			<h5><small><b>En Salle : </b></small> {{ release_date }}</h5> 
+			<h5><small><b>Réalisé par : </b></small> {{ director }}</h5>
+			<h5><small><b>Casting : </b></small> {{ director }}</h5> 
+			<br/>
+			<h5><small><b>Synopsys :</b></small></h5> 
+			<p>{{ plot }}</p>
+		</div>
 	</div>
-	<div class="large-9 columns movie-panel">
-		<p>Durée : {{ runtime }} | En Salle : {{ release_date }} 
-										| Réalisé par : {{ director }}</p>
-		<p>{{ plot }}</p>
-		<hr />
-		<p>Nombre de tweets analysés: {{ total_count }}</p>
-		<p>Nombre Positif: {{ stat_pos }}</p>
-		<p>Nombre Négatif: {{ stat_neg }}</p>
+	
+	<div class="row results">
+		<div class="small-12 medium-4 large-4 columns result_number">
+			<h1><i class="fi-like"></i></h1>
+			<h4 class="hide-for-small-only"><small><b>Nombre de tweets Positif:</b></small></h4>
+			<h2>{{ stat_pos }} %</h2>
+		</div>
+
+		<div class="small-12 medium-4 large-4 columns result_number">
+			<h1><i class="fi-social-twitter"></i></h1>
+			<h4 class="hide-for-small-only"><small><b>Nombre de tweets analysés:</b></small></h4>
+			<h2>{{ total_count }}</h2>
+		</div>
+		
+		<div class="small-12 medium-4 large-4 columns result_number">
+			<h1><i class="fi-dislike"></i></h1>
+			<h4 class="hide-for-small-only"><small><b>Nombre de tweets négatif:</b></small></h4>
+			<h2>{{ stat_neg }} %</h2>
+		</div>
+	</div>
+
+	<div class="row trailer">
+		<div class="small-12 columns">
+			<div class="flex-video">
+			{{!-- {{ youtube trailer }} --}}
+				<iframe width="853" height="480" src="https://www.youtube.com/embed/WzV6mXIOVl4?rel=0" frameborder="0" allowfullscreen ></iframe>
+			</div>
+		</div>
 	</div>
 </div>
