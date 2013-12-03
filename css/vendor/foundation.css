@@ -2934,11 +2934,11 @@ td {
 
 /* Default Link Styles */
 a {
-  color: #008cba;
+  color: #cd2628;
   text-decoration: none;
   line-height: inherit; }
   a:hover, a:focus {
-    color: #0079a1; }
+    color: #9B1C1F; }
   a img {
     border: none; }
 

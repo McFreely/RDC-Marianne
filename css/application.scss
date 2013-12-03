@@ -42,7 +42,7 @@ body {
 .fi-arrow-down {color: red;}
 
 
-.poster {float: left; margin-top: 20px; padding-left:15px;}
+.details-poster {float: left; margin-top: 20px; padding-left: 15px;}
 .details {
     margin: 10px 0 0 0; 
 
@@ -57,3 +57,5 @@ body {
 .fi-dislike {color: $red;}
 
 .trailer {text-align: center;}
+
+.footer p {text-align:right;}

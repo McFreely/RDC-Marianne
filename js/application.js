@@ -369,10 +369,20 @@ module.exports = MoviesRoute;
 
 },{}],13:[function(require,module,exports){
 
+Ember.TEMPLATES['_footer'] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  
+
+
+  data.buffer.push("<div class=\"row footer\">\n	<div class=\"small-7 small-offset-5\">\n	<hr/>\n	<p><small>\n		Made with love by <a href=\"http://mcfreely.fr\">Paul McFreely</a>\n	</small></p>	\n	</div>\n</div>\n</hr>");
+  
+});
+
 Ember.TEMPLATES['application'] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', hashTypes, hashContexts, escapeExpression=this.escapeExpression;
+  var buffer = '', stack1, hashTypes, hashContexts, options, escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;
 
 
   data.buffer.push("<div class=\"container-banner\">\n<div class=\"row\">\n	<div class=\"large-12\" >\n		<img src=\"img/banner.jpg\" alt=\"\">\n	</div>\n</div>\n</div>\n\n<div class=\"row\">\n	<div class=\"large-12\">\n		");
@@ -383,6 +393,11 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "outlet", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push("\n\n");
+  hashTypes = {};
+  hashContexts = {};
+  options = {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
+  data.buffer.push(escapeExpression(((stack1 = helpers.partial || depth0.partial),stack1 ? stack1.call(depth0, "footer", options) : helperMissing.call(depth0, "partial", "footer", options))));
   data.buffer.push("\n");
   return buffer;
   
@@ -404,7 +419,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1, hashContexts, hashTypes, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  data.buffer.push("<div class=\"test\">\n	<div class=\"row\">\n		<div class=\"small-3 medium-3 poster\">\n			<img ");
+  data.buffer.push("<div class=\"test\">\n	<div class=\"row\">\n		<div class=\"small-3 medium-3 details-poster\">\n			<img ");
   hashContexts = {'src': depth0,'alt': depth0};
   hashTypes = {'src': "STRING",'alt': "STRING"};
   options = {hash:{
