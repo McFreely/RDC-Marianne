@@ -50,12 +50,16 @@ body {
     h5 b {color: black;}
 }
 
-.results {margin-top: 10px; margin-bottom: 30px;}
+.container-movie {
+    background-color: lighten($background, 40%);
+}
+
+.results {padding: 15px 0; margin-bottom: 30px;}
 .result_number {text-align: center;}
 .fi-like {color: green;}
 .fi-social-twitter {color: $twitter;}
 .fi-dislike {color: $red;}
 
-.trailer {text-align: center;}
+.trailer {text-align: center; padding: 30px 0 10px 0;}
 
 .footer p {text-align:right;}

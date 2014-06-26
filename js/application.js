@@ -416,10 +416,22 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 Ember.TEMPLATES['movie'] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', stack1, hashContexts, hashTypes, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+  var buffer = '', stack1, hashTypes, hashContexts, options, escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;
 
 
-  data.buffer.push("<div class=\"test\">\n	<div class=\"row\">\n		<div class=\"small-3 medium-3 details-poster\">\n			<img ");
+  data.buffer.push("<div class=\"test\">\n\n	<div class=\"container-movie\">\n	<div class=\"row results\">\n		<div class=\"small-12 medium-4 large-4 columns result_number\">\n			<h1><i class=\"fi-like\"></i></h1>\n			<h4 class=\"hide-for-small-only\"><small><b>Nombre de tweets Positif:</b></small></h4>\n			<h2>");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "stat_pos", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push(" %</h2>\n		</div>\n\n		<div class=\"small-12 medium-4 large-4 columns result_number\">\n			<h1><i class=\"fi-social-twitter\"></i></h1>\n			<h4 class=\"hide-for-small-only\"><small><b>Nombre de tweets analysés:</b></small></h4>\n			<h2>");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "total_count", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push("</h2>\n		</div>\n		\n		<div class=\"small-12 medium-4 large-4 columns result_number\">\n			<h1><i class=\"fi-dislike\"></i></h1>\n			<h4 class=\"hide-for-small-only\"><small><b>Nombre de tweets négatif:</b></small></h4>\n			<h2>");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "stat_neg", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push(" %</h2>\n		</div>\n	</div>\n	</div>\n\n		<div class=\"row\">\n		<div class=\"small-3 medium-3 details-poster\">\n			<img ");
   hashContexts = {'src': depth0,'alt': depth0};
   hashTypes = {'src': "STRING",'alt': "STRING"};
   options = {hash:{
@@ -451,20 +463,8 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "plot", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("</p>\n		</div>\n	</div>\n	\n	<div class=\"row results\">\n		<div class=\"small-12 medium-4 large-4 columns result_number\">\n			<h1><i class=\"fi-like\"></i></h1>\n			<h4 class=\"hide-for-small-only\"><small><b>Nombre de tweets Positif:</b></small></h4>\n			<h2>");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "stat_pos", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push(" %</h2>\n		</div>\n\n		<div class=\"small-12 medium-4 large-4 columns result_number\">\n			<h1><i class=\"fi-social-twitter\"></i></h1>\n			<h4 class=\"hide-for-small-only\"><small><b>Nombre de tweets analysés:</b></small></h4>\n			<h2>");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "total_count", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("</h2>\n		</div>\n		\n		<div class=\"small-12 medium-4 large-4 columns result_number\">\n			<h1><i class=\"fi-dislike\"></i></h1>\n			<h4 class=\"hide-for-small-only\"><small><b>Nombre de tweets négatif:</b></small></h4>\n			<h2>");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "stat_neg", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push(" %</h2>\n		</div>\n	</div>\n\n	<div class=\"row trailer\">\n		<div class=\"small-12 columns\">\n			<div class=\"flex-video\">\n			");
-  data.buffer.push("\n				<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/WzV6mXIOVl4?rel=0\" frameborder=\"0\" allowfullscreen ></iframe>\n			</div>\n		</div>\n	</div>\n</div>");
+  data.buffer.push("</p>\n		</div>\n	</div>\n	<div class=\"container-movie\">\n	<div class=\"row trailer\">\n		<div class=\"small-12 columns\">\n			<div class=\"flex-video\">\n			");
+  data.buffer.push("\n				<iframe width=\"853\" height=\"480\" src=\"https://www.youtube.com/embed/WzV6mXIOVl4?rel=0\" frameborder=\"0\" allowfullscreen ></iframe>\n			</div>\n		</div>\n	</div>\n	</div>\n</div>");
   return buffer;
   
 });
