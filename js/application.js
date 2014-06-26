@@ -122,7 +122,7 @@ Movie.FIXTURES = [{
 	trailer: 'https://www.youtube.com/embed/WzV6mXIOVl4',
 	runtime: 120,
 	director: "Peter Pan",
-	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL. Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL. Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
+	plot: "The film opens with a wall of exposition. Long ago, a nine-tailed fox attacked the Earth and sunk Atlantis. Hope seemed lost until a man named Minotaur Namikaze appeared and defeated the fox. He then feasted on its chakra meat and used the power he gained to build five hidden villages: the Leaf Hidden Village, the Sand Hidden Village, the Dirty Hidden Village, the Cloud Hidden Village, and the Mist Hidden Village. Every five years, the Ninja World Tournament is held to (somehow) honour Minotaur's achievements."
 },{
 	id: 2,
 	title:   "Thor 2",
@@ -134,7 +134,7 @@ Movie.FIXTURES = [{
 	trailer: 'youtube',
 	runtime: 120,
 	director: "Peter Pan",
-	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
+	plot: "The film opens with a wall of exposition. Long ago, a nine-tailed fox attacked the Earth and sunk Atlantis. Hope seemed lost until a man named Minotaur Namikaze appeared and defeated the fox. He then feasted on its chakra meat and used the power he gained to build five hidden villages: the Leaf Hidden Village, the Sand Hidden Village, the Dirty Hidden Village, the Cloud Hidden Village, and the Mist Hidden Village. Every five years, the Ninja World Tournament is held to (somehow) honour Minotaur's achievements."
 },{
 	id: 3,
 	title:   "Oblivion",
@@ -146,7 +146,7 @@ Movie.FIXTURES = [{
 	trailer: 'youtube',
 	runtime: 120,
 	director: "Peter Pan",
-	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
+	plot: "The film opens with a wall of exposition. Long ago, a nine-tailed fox attacked the Earth and sunk Atlantis. Hope seemed lost until a man named Minotaur Namikaze appeared and defeated the fox. He then feasted on its chakra meat and used the power he gained to build five hidden villages: the Leaf Hidden Village, the Sand Hidden Village, the Dirty Hidden Village, the Cloud Hidden Village, and the Mist Hidden Village. Every five years, the Ninja World Tournament is held to (somehow) honour Minotaur's achievements."
 },{
 	id: 4,
 	title:   "La Vénus à la fourrure",
@@ -158,7 +158,7 @@ Movie.FIXTURES = [{
 	trailer: 'youtube',
 	runtime: 120,
 	director: "Peter Pan",
-	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
+	plot: "The film opens with a wall of exposition. Long ago, a nine-tailed fox attacked the Earth and sunk Atlantis. Hope seemed lost until a man named Minotaur Namikaze appeared and defeated the fox. He then feasted on its chakra meat and used the power he gained to build five hidden villages: the Leaf Hidden Village, the Sand Hidden Village, the Dirty Hidden Village, the Cloud Hidden Village, and the Mist Hidden Village. Every five years, the Ninja World Tournament is held to (somehow) honour Minotaur's achievements."
 },
 {
 	id: 5,
@@ -171,7 +171,7 @@ Movie.FIXTURES = [{
 	trailer: 'youtube',
 	runtime: 120,
 	director: "Peter Pan",
-	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
+	plot: "The film opens with a wall of exposition. Long ago, a nine-tailed fox attacked the Earth and sunk Atlantis. Hope seemed lost until a man named Minotaur Namikaze appeared and defeated the fox. He then feasted on its chakra meat and used the power he gained to build five hidden villages: the Leaf Hidden Village, the Sand Hidden Village, the Dirty Hidden Village, the Cloud Hidden Village, and the Mist Hidden Village. Every five years, the Ninja World Tournament is held to (somehow) honour Minotaur's achievements."
 },
 {
 	id: 6,
@@ -184,7 +184,7 @@ Movie.FIXTURES = [{
 	trailer: 'youtube',
 	runtime: 120,
 	director: "Peter Pan",
-	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
+	plot: "The film opens with a wall of exposition. Long ago, a nine-tailed fox attacked the Earth and sunk Atlantis. Hope seemed lost until a man named Minotaur Namikaze appeared and defeated the fox. He then feasted on its chakra meat and used the power he gained to build five hidden villages: the Leaf Hidden Village, the Sand Hidden Village, the Dirty Hidden Village, the Cloud Hidden Village, and the Mist Hidden Village. Every five years, the Ninja World Tournament is held to (somehow) honour Minotaur's achievements."
 },{	id: 7,
 	title:   "Intouchables",
 	release_date: 2012,
@@ -195,7 +195,7 @@ Movie.FIXTURES = [{
 	trailer: 'www.youtube.com/embed/dvdJ--DV0Uo"',
 	runtime: 120,
 	director: "Peter Pan",
-	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
+	plot: "The film opens with a wall of exposition. Long ago, a nine-tailed fox attacked the Earth and sunk Atlantis. Hope seemed lost until a man named Minotaur Namikaze appeared and defeated the fox. He then feasted on its chakra meat and used the power he gained to build five hidden villages: the Leaf Hidden Village, the Sand Hidden Village, the Dirty Hidden Village, the Cloud Hidden Village, and the Mist Hidden Village. Every five years, the Ninja World Tournament is held to (somehow) honour Minotaur's achievements."
 },{
 	id: 8,
 	title:   "Thor 2",
@@ -207,7 +207,7 @@ Movie.FIXTURES = [{
 	trailer: 'youtube',
 	runtime: 120,
 	director: "Peter Pan",
-	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
+	plot: "UThe film opens with a wall of exposition. Long ago, a nine-tailed fox attacked the Earth and sunk Atlantis. Hope seemed lost until a man named Minotaur Namikaze appeared and defeated the fox. He then feasted on its chakra meat and used the power he gained to build five hidden villages: the Leaf Hidden Village, the Sand Hidden Village, the Dirty Hidden Village, the Cloud Hidden Village, and the Mist Hidden Village. Every five years, the Ninja World Tournament is held to (somehow) honour Minotaur's achievements."
 },{
 	id: 9,
 	title:   "Oblivion",
@@ -219,7 +219,7 @@ Movie.FIXTURES = [{
 	trailer: 'youtube',
 	runtime: 120,
 	director: "Peter Pan",
-	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
+	plot: "The film opens with a wall of exposition. Long ago, a nine-tailed fox attacked the Earth and sunk Atlantis. Hope seemed lost until a man named Minotaur Namikaze appeared and defeated the fox. He then feasted on its chakra meat and used the power he gained to build five hidden villages: the Leaf Hidden Village, the Sand Hidden Village, the Dirty Hidden Village, the Cloud Hidden Village, and the Mist Hidden Village. Every five years, the Ninja World Tournament is held to (somehow) honour Minotaur's achievements."
 },{
 	id: 10,
 	title:   "La Vénus à la fourrure",
@@ -231,7 +231,7 @@ Movie.FIXTURES = [{
 	trailer: 'youtube',
 	runtime: 120,
 	director: "Peter Pan",
-	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
+	plot: "The film opens with a wall of exposition. Long ago, a nine-tailed fox attacked the Earth and sunk Atlantis. Hope seemed lost until a man named Minotaur Namikaze appeared and defeated the fox. He then feasted on its chakra meat and used the power he gained to build five hidden villages: the Leaf Hidden Village, the Sand Hidden Village, the Dirty Hidden Village, the Cloud Hidden Village, and the Mist Hidden Village. Every five years, the Ninja World Tournament is held to (somehow) honour Minotaur's achievements."
 },
 {
 	id: 11,
@@ -244,7 +244,7 @@ Movie.FIXTURES = [{
 	trailer: 'youtube',
 	runtime: 120,
 	director: "Peter Pan",
-	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
+	plot: "The film opens with a wall of exposition. Long ago, a nine-tailed fox attacked the Earth and sunk Atlantis. Hope seemed lost until a man named Minotaur Namikaze appeared and defeated the fox. He then feasted on its chakra meat and used the power he gained to build five hidden villages: the Leaf Hidden Village, the Sand Hidden Village, the Dirty Hidden Village, the Cloud Hidden Village, and the Mist Hidden Village. Every five years, the Ninja World Tournament is held to (somehow) honour Minotaur's achievements."
 },
 {
 	id: 12,
@@ -257,7 +257,7 @@ Movie.FIXTURES = [{
 	trailer: 'youtube',
 	runtime: 120,
 	director: "Peter Pan",
-	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
+	plot: "The film opens with a wall of exposition. Long ago, a nine-tailed fox attacked the Earth and sunk Atlantis. Hope seemed lost until a man named Minotaur Namikaze appeared and defeated the fox. He then feasted on its chakra meat and used the power he gained to build five hidden villages: the Leaf Hidden Village, the Sand Hidden Village, the Dirty Hidden Village, the Cloud Hidden Village, and the Mist Hidden Village. Every five years, the Ninja World Tournament is held to (somehow) honour Minotaur's achievements."
 },{	id: 13,
 	title:   "Intouchables",
 	release_date: 2012,
@@ -268,7 +268,7 @@ Movie.FIXTURES = [{
 	trailer: 'www.youtube.com/embed/dvdJ--DV0Uo"',
 	runtime: 120,
 	director: "Peter Pan",
-	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
+	plot: "The film opens with a wall of exposition. Long ago, a nine-tailed fox attacked the Earth and sunk Atlantis. Hope seemed lost until a man named Minotaur Namikaze appeared and defeated the fox. He then feasted on its chakra meat and used the power he gained to build five hidden villages: the Leaf Hidden Village, the Sand Hidden Village, the Dirty Hidden Village, the Cloud Hidden Village, and the Mist Hidden Village. Every five years, the Ninja World Tournament is held to (somehow) honour Minotaur's achievements."
 },{
 	id: 14,
 	title:   "Thor 2",
@@ -280,7 +280,7 @@ Movie.FIXTURES = [{
 	trailer: 'youtube',
 	runtime: 120,
 	director: "Peter Pan",
-	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
+	plot: "The film opens with a wall of exposition. Long ago, a nine-tailed fox attacked the Earth and sunk Atlantis. Hope seemed lost until a man named Minotaur Namikaze appeared and defeated the fox. He then feasted on its chakra meat and used the power he gained to build five hidden villages: the Leaf Hidden Village, the Sand Hidden Village, the Dirty Hidden Village, the Cloud Hidden Village, and the Mist Hidden Village. Every five years, the Ninja World Tournament is held to (somehow) honour Minotaur's achievements."
 },{
 	id: 15,
 	title:   "Oblivion",
@@ -292,7 +292,7 @@ Movie.FIXTURES = [{
 	trailer: 'youtube',
 	runtime: 120,
 	director: "Peter Pan",
-	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
+	plot: "The film opens with a wall of exposition. Long ago, a nine-tailed fox attacked the Earth and sunk Atlantis. Hope seemed lost until a man named Minotaur Namikaze appeared and defeated the fox. He then feasted on its chakra meat and used the power he gained to build five hidden villages: the Leaf Hidden Village, the Sand Hidden Village, the Dirty Hidden Village, the Cloud Hidden Village, and the Mist Hidden Village. Every five years, the Ninja World Tournament is held to (somehow) honour Minotaur's achievements."
 },{
 	id: 16,
 	title:   "La Vénus à la fourrure",
@@ -304,7 +304,7 @@ Movie.FIXTURES = [{
 	trailer: 'youtube',
 	runtime: 120,
 	director: "Peter Pan",
-	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
+	plot: "The film opens with a wall of exposition. Long ago, a nine-tailed fox attacked the Earth and sunk Atlantis. Hope seemed lost until a man named Minotaur Namikaze appeared and defeated the fox. He then feasted on its chakra meat and used the power he gained to build five hidden villages: the Leaf Hidden Village, the Sand Hidden Village, the Dirty Hidden Village, the Cloud Hidden Village, and the Mist Hidden Village. Every five years, the Ninja World Tournament is held to (somehow) honour Minotaur's achievements."
 },
 {
 	id: 17,
@@ -317,7 +317,7 @@ Movie.FIXTURES = [{
 	trailer: 'youtube',
 	runtime: 120,
 	director: "Peter Pan",
-	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
+	plot: "The film opens with a wall of exposition. Long ago, a nine-tailed fox attacked the Earth and sunk Atlantis. Hope seemed lost until a man named Minotaur Namikaze appeared and defeated the fox. He then feasted on its chakra meat and used the power he gained to build five hidden villages: the Leaf Hidden Village, the Sand Hidden Village, the Dirty Hidden Village, the Cloud Hidden Village, and the Mist Hidden Village. Every five years, the Ninja World Tournament is held to (somehow) honour Minotaur's achievements."
 },
 {
 	id: 18,
@@ -330,7 +330,7 @@ Movie.FIXTURES = [{
 	trailer: 'youtube',
 	runtime: 120,
 	director: "Peter Pan",
-	plot: "Un homme en fauteuil roulant se fait pousser par un petit délinquant reconverti en aide à la personne. LOL"
+	plot: "The film opens with a wall of exposition. Long ago, a nine-tailed fox attacked the Earth and sunk Atlantis. Hope seemed lost until a man named Minotaur Namikaze appeared and defeated the fox. He then feasted on its chakra meat and used the power he gained to build five hidden villages: the Leaf Hidden Village, the Sand Hidden Village, the Dirty Hidden Village, the Cloud Hidden Village, and the Mist Hidden Village. Every five years, the Ninja World Tournament is held to (somehow) honour Minotaur's achievements."
 }
 ]
 
